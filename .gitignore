@@ -1,0 +1,10 @@
+.venv/
+.env
+
+# Generated artifacts
+*.parquet
+*.txt
+data/silver/charts/
+
+# OS
+.DS_Store
