@@ -6,9 +6,13 @@ COPY pyproject.toml uv.lock ./
 
 RUN pip install uv && uv sync --frozen --no-dev
 
+COPY db.py ./
 COPY data/ ./data/
+COPY entrypoint.sh ./
 COPY .env.example .env
 
 ENV PYTHONUNBUFFERED=1
 
-CMD ["uv", "run", "python", "data/raw/ingestion_raw.py"]
+RUN chmod +x entrypoint.sh
+
+CMD ["./entrypoint.sh"]

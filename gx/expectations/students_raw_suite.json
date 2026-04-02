@@ -1,0 +1,153 @@
+{
+  "expectations": [
+    {
+      "id": "5d5e2003-7553-47da-ab28-7c3702a71f02",
+      "kwargs": {
+        "min_value": 1
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    },
+    {
+      "id": "44d85291-3026-4300-bdad-d7082f85aeef",
+      "kwargs": {
+        "column": "gpa"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "4fcd6f5a-376c-4bf1-b2b8-f1f64400aefd",
+      "kwargs": {
+        "column": "study_hours"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "0641687e-131b-4e55-8bc3-1001b4fae8de",
+      "kwargs": {
+        "column": "attendance"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "53bb3526-e4ed-4539-8876-03a31228786c",
+      "kwargs": {
+        "column": "performance_level"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "e9ae062c-bd2e-42ad-b4ba-75ea7b863bb0",
+      "kwargs": {
+        "column": "sleep_hours"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "a173854a-6a61-4278-9873-077ff89c9bf5",
+      "kwargs": {
+        "column": "gpa"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "ae65acdd-1153-43bd-874c-f80af5294f3d",
+      "kwargs": {
+        "column": "study_hours"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "a3126688-8511-4bbb-9a42-967b02f030c1",
+      "kwargs": {
+        "column": "performance_level"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "ec8673d4-5a1b-41a3-aeda-9e339d34f803",
+      "kwargs": {
+        "column": "attendance"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "1a296603-69f4-498c-9558-9bcf8a03e72f",
+      "kwargs": {
+        "column": "gpa",
+        "max_value": 4.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "e5f9a808-e797-408d-9f4d-e5dcea9fd833",
+      "kwargs": {
+        "column": "attendance",
+        "max_value": 100.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "eb908380-3ca4-4527-b15e-1bbf49845ff0",
+      "kwargs": {
+        "column": "sleep_hours",
+        "max_value": 24.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "3e9cf5e4-fe21-4591-80ed-8c1144c2c13a",
+      "kwargs": {
+        "column": "study_hours",
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "f55fe38d-66ab-47b5-bc1c-10700fefa915",
+      "kwargs": {
+        "max_value": 50.0,
+        "min_value": 40.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_column_count_to_be_between"
+    }
+  ],
+  "id": "770a7d41-4989-4783-86c8-623919ca9bdb",
+  "meta": {
+    "great_expectations_version": "1.15.2"
+  },
+  "name": "students_raw_suite",
+  "notes": null
+}

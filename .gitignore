@@ -6,5 +6,8 @@
 *.txt
 data/silver/charts/
 
+# Great Expectations — artefatos gerados
+gx/uncommitted/
+
 # OS
 .DS_Store

@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "eace233c-0796-4904-9856-7ff85ac11442",
+      "name": "students_df"
+    },
+    "batch_definition": {
+      "id": "55d9172e-66a6-45ab-a311-eb6158674194",
+      "name": "full_batch"
+    },
+    "datasource": {
+      "id": "f848acad-0bb7-4539-acfa-4653e9ff1c57",
+      "name": "students_raw_pandas"
+    }
+  },
+  "id": "689ef22b-7f28-425f-8ebc-b4ef1a06b8d1",
+  "name": "students_raw_validation",
+  "suite": {
+    "id": "770a7d41-4989-4783-86c8-623919ca9bdb",
+    "name": "students_raw_suite"
+  }
+}
