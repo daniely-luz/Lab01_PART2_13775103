@@ -36,9 +36,25 @@ services:
     networks:
       - medallion-network
 
+  metabase:
+    image: metabase/metabase:latest
+    container_name: medallion_metabase
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    environment:
+      MB_DB_TYPE: h2
+    volumes:
+      - metabase_data:/metabase-data
+    networks:
+      - medallion-network
+
 networks:
   medallion-network:
     driver: bridge
 
 volumes:
   postgres_data:
+  metabase_data:
