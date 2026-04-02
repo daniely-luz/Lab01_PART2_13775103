@@ -1,0 +1,44 @@
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: medallion_postgres
+    environment:
+      POSTGRES_USER: daniely.santos
+      POSTGRES_PASSWORD: ""
+      POSTGRES_DB: students
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - medallion-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U daniely.santos -d students"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  pipeline:
+    build: .
+    container_name: medallion_pipeline
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: daniely.santos
+      DB_PASSWORD: ""
+      DB_NAME: students
+      KAGGLE_API_TOKEN: ${KAGGLE_API_TOKEN}
+    networks:
+      - medallion-network
+
+networks:
+  medallion-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
